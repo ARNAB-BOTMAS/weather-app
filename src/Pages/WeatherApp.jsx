@@ -30,7 +30,7 @@ const WeatherApp = () => {
     const handleSearch = async () => {
         try {
             setLoading(true);
-            await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${searchLocation}&aqi=yes`)
+            await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${searchLocation}&aqi=yes`)
             .then(response => {
                 if (!response.ok) {
                     Swal.fire({
