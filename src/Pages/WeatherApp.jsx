@@ -13,7 +13,7 @@ const override = css`
 `;
 
 const WeatherApp = () => {
-    console.log(process.env.REACT_APP_API_KEY);
+    /* console.log(process.env.REACT_APP_API_KEY); */
 
     let apiKey = process.env.REACT_APP_API_KEY;
     const [searchLocation, setSearchLocation] = useState('');
