@@ -40,12 +40,13 @@
         border: 3px solid azure;
         @include phone {
             background: linear-gradient(180deg , #4c53af,#429bb3);
+            justify-content: flex-start;
             padding: 0 30px;
             width: 100vw;
             height: 100vh;
             border: none;
             border-radius: 0;
-            gap: 20px;
+            gap: 35px;
         }
         // gap: 10px;
         .searchBar{
@@ -61,6 +62,7 @@
             padding: 5px 20px;
             border-radius: 50px;
             @include phone{
+                margin-top: 40px;
                 width: 90%;
             }
             input{
