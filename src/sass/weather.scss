@@ -1,0 +1,130 @@
+@mixin phone {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 501px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+.weather-App{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg , #4c53af,#429bb3);
+    @include phone {
+        background: none;
+    }
+    .innerWeather{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: azure;
+        padding: 20px 20px;
+        width: 380px;
+        height: fit-content;
+        background: #4c53af7e;
+        border-radius: 20px;
+        border: 3px solid azure;
+        @include phone {
+            background: linear-gradient(180deg , #4c53af,#429bb3);
+            padding: 0 30px;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            border-radius: 0;
+            gap: 20px;
+        }
+        // gap: 10px;
+        .searchBar{
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: flex-start;
+            background: #fff;
+            color: #000;
+            height: 30px;
+            width: 70%;
+            padding: 5px 20px;
+            border-radius: 50px;
+            @include phone{
+                width: 90%;
+            }
+            input{
+                border: none;
+                outline: none;
+                padding:  10px;
+                background: transparent;
+                width:  100%;
+            }
+            .searchLogo{
+                padding: 0 10px;
+            }
+        }
+        .weatherLogo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                padding: 20px;
+                // background: #429bb3;
+                width:  150px;
+                object-fit: cover;
+            }
+            // width: 50px;
+            font-size: 150px;
+        }
+        .tempAndFeelsLike{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            gap: 10px;
+            .condition{
+                font-size: 1rem;
+            }
+        }
+        .loaction{
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .dataContiner{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            .element{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .logo{
+                    margin: auto;
+                    font-size: 35px;
+                }
+                .data{
+                    text-align: left;
+                    .humidityPer{
+                        font-size: 0.8;
+                    }
+                    .humidityTxt{
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
