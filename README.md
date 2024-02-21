@@ -28,7 +28,7 @@ The weather application provides users with real-time weather information based 
 
 ## Setup
 To set up the project locally, follow these steps:
-1. Clone the repository: `git clone https://github.com/your-username/weather-app.git`
+1. Clone the repository: `https://github.com/ARNAB-BOTMAS/weather-app.git`
 2. Navigate to the project directory: `cd weather-app`
 3. Install dependencies: `npm install`
 4. Create an account on [WeatherAPI](https://www.weatherapi.com/) and obtain your API key.
